@@ -49,6 +49,7 @@ public class CompteurController {
     //
     // Ainsi, chaque fois que la valeur de `compteur` change (via incrementer/decrementer/reinit),
     // le label se met à jour automatiquement - aucun setText() à appeler !
+    labelCompteur.textProperty().bind(compteur.asString());
   }
 
   /**
@@ -60,18 +61,21 @@ public class CompteurController {
   @FXML
   private void incrementer() {
     // TODO exercice 2 : incrémenter la valeur de la propriété compteur.
+    compteur.set(compteur.get() + 1);
   }
 
   /** Action du bouton −. Décrémente le compteur. */
   @FXML
   private void decrementer() {
     // TODO exercice 2 : décrémenter la valeur de la propriété compteur.
+    compteur.set(compteur.get() - 1);
   }
 
   /** Action du bouton Réinitialiser. Remet le compteur à zéro. */
   @FXML
   private void reinitialiser() {
     // TODO exercice 2 : remettre la propriété compteur à 0.
+    compteur.set(0);
   }
 
   /**
