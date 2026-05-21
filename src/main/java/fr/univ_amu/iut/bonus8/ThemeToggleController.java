@@ -55,7 +55,7 @@ public class ThemeToggleController {
                   .getScene()
                   .getStylesheets()
                   .setAll(getClass().getResource(css).toExternalForm());
-              boutonTheme.setText(selected ? "🌞 Mode clair" : "🌙 Mode sombre");
+              boutonTheme.setText(selected ? "Mode clair" : "Mode sombre");
             });
   }
 }
